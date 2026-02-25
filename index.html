@@ -100,7 +100,7 @@
             background-size: 1.2em 1.2em;
             padding-right: 2.5rem;
             width: auto;
-            max-width: 160px;
+            max-width: 200px;
             min-width: 160px;
         }
 
@@ -307,20 +307,6 @@
                 <h2 class="text-2xl font-bold text-gray-800">
                     Mediana del avaúo catastral
                 </h2>
-                <div class="flex flex-wrap justify-center md:justify-end space-x-2 mt-4 md:mt-0">
-                    <!-- Botón de exportar a Excel -->
-                    <button id="btn-download-excel-mapa-localidades"
-                        class="flex items-center justify-center bg-[#FEB400] hover:bg-[#e0a100] text-black font-semibold px-0 py-2 rounded-md shadow-md"
-                        title="Descargar datos en Excel">
-                        <!-- Icono de descarga -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                        </svg>
-                        <span>Exportar</span>
-                    </button>
-                </div>
             </div>
             <p class="text-gray-600 mb-4">
                 Para la vigencia 2026, la localidad la mayor mediana de valor catastral fue Barrios Unidos con
@@ -350,22 +336,6 @@
                 <h2 class="text-2xl font-bold text-gray-800">
                     Avalúo por Grupo Económico
                 </h2>
-                <div class="flex flex-wrap justify-center md:justify-end space-x-2 mt-4 md:mt-0">
-                    <!-- Filtro de localidades -->
-                    <select id="filter-localidad-valor-integral-lge"
-                        class="bg-white border border-gray-300 text-gray-700 py-2 px-4 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#FEB400]">
-                        <option value="">Seleccione localidad</option>
-                    </select>
-                    <button id="btn-download-excel-avaluo"
-                        class="flex items-center justify-center bg-[#FEB400] hover:bg-[#e0a100] text-black font-semibold px-4 py-2 rounded-md shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                        </svg>
-                        <span>Exportar</span>
-                    </button>
-                </div>
             </div>
             <p class="text-gray-600 mb-4">
                 Para la vigencia 2026 el grupo de uso económico con la mayor mediana de valor catastral fue Industrial
@@ -394,17 +364,6 @@
                 <h2 class="text-2xl font-bold text-gray-800">
                     Relación: Avalúo Total vs Cantidad de Predios
                 </h2>
-                <div class="flex flex-wrap justify-center md:justify-end space-x-2 mt-4 md:mt-0">
-                    <button id="btn-download-excel-burbujas"
-                        class="flex items-center justify-center bg-[#FEB400] hover:bg-[#e0a100] text-black font-semibold px-4 py-2 rounded-md shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                        </svg>
-                        <span>Exportar</span>
-                    </button>
-                </div>
             </div>
             <p class="text-gray-600 mb-4">
                 Avalúo en millones de pesos, cantidad de predios y valor promedio por predio
@@ -435,20 +394,6 @@
             <h2 class="text-2xl font-bold text-gray-800">
 
             </h2>
-            <div class="flex flex-wrap justify-center md:justify-end space-x-2 mt-4 md:mt-0">
-                <!-- Botón de exportar a Excel -->
-                <button id="btn-download-excel-mapa-localidades-valor-integral-l"
-                    class="flex items-center justify-center bg-[#FEB400] hover:bg-[#e0a100] text-black font-semibold px-0 py-2 rounded-md shadow-md"
-                    title="Descargar datos en Excel">
-                    <!-- Icono de descarga -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                    <span>Exportar</span>
-                </button>
-            </div>
         </div>
         <p class="text-gray-600 mb-4">
             Para la vigencia 2026 la localidad la mayor mediana de avalúo catastral por m2 fue Chapinero con $4.475.615,
@@ -483,15 +428,6 @@
                         class="bg-white border border-gray-300 text-gray-700 py-2 px-4 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#FEB400]">
                         <option value="">Seleccione localidad</option>
                     </select>
-                    <button id="btn-download-excel-valor-integral-lge"
-                        class="flex items-center justify-center bg-[#FEB400] hover:bg-[#e0a100] text-black font-semibold px-4 py-2 rounded-md shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                        </svg>
-                        <span>Exportar</span>
-                    </button>
                 </div>
             </div>
             <p class="text-gray-600 mb-4">
@@ -522,20 +458,6 @@
                 <h2 class="text-2xl font-bold text-gray-800">
                     Mediana del valor comercial por localidad
                 </h2>
-                <div class="flex flex-wrap justify-center md:justify-end space-x-2 mt-4 md:mt-0">
-                    <!-- Botón de exportar a Excel -->
-                    <button id="btn-download-excel-mapa-avaluo-comercio-L"
-                        class="flex items-center justify-center bg-[#FEB400] hover:bg-[#e0a100] text-black font-semibold px-0 py-2 rounded-md shadow-md"
-                        title="Descargar datos en Excel">
-                        <!-- Icono de descarga -->
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                        </svg>
-                        <span>Exportar</span>
-                    </button>
-                </div>
             </div>
             <p class="text-gray-600 mb-4">
                 Para 2026, el valor catastral de Bogotá es de $1.068 billones de pesos. Por localidad, la mayor mediana
@@ -566,22 +488,11 @@
                 <h2 class="text-2xl font-bold text-gray-800">
                     Avalúo Comercial por Grupo Económico
                 </h2>
-                <div class="flex flex-wrap justify-center md:justify-end space-x-2 mt-4 md:mt-0">
-                    <button id="btn-download-excel-avaluo-comercial-lge"
-                        class="flex items-center justify-center bg-[#FEB400] hover:bg-[#e0a100] text-black font-semibold px-4 py-2 rounded-md shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                        </svg>
-                        <span>Exportar</span>
-                    </button>
-                </div>
             </div>
             <p class="text-gray-600 mb-4">
                 Para la vigencia 2026, el grupo de uso económico con la mayor mediana de valor comercial fue Industrial
                 con $2.738.980.354 y un área mediana de área construida de 745,30 m2, seguido de dotacional con
-                $1.564.964.465 y un área de 558,00 m2,​
+                $1.564.964.465 y un área de 558,00 m2,
 
                 El uso económico con la menor mediana de valor comercial es depósitos y parqueaderos con $32.300.000 y
                 un área de 10,71 m2
@@ -607,20 +518,6 @@
             <h2 class="text-2xl font-bold text-gray-800">
                 Mediana del valor comercial de terreno
             </h2>
-            <div class="flex flex-wrap justify-center md:justify-end space-x-2 mt-4 md:mt-0">
-                <!-- Botón de exportar a Excel -->
-                <button id="btn-download-excel-mapa-localidades"
-                    class="flex items-center justify-center bg-[#FEB400] hover:bg-[#e0a100] text-black font-semibold px-0 py-2 rounded-md shadow-md"
-                    title="Descargar datos en Excel">
-                    <!-- Icono de descarga -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                    <span>Exportar</span>
-                </button>
-            </div>
         </div>
         <p class="text-gray-600 mb-4">
             Para la vigencia 2026 la localidad la mayor mediana de valor comercial por metro cuadrado de área de terreno
@@ -649,17 +546,6 @@
                 <h2 class="text-2xl font-bold text-gray-800">
                     Avalúo Comercial por Grupo Económico
                 </h2>
-                <div class="flex flex-wrap justify-center md:justify-end space-x-2 mt-4 md:mt-0">
-                    <button id="btn-download-valor-referencia-LGE"
-                        class="flex items-center justify-center bg-[#FEB400] hover:bg-[#e0a100] text-black font-semibold px-4 py-2 rounded-md shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                        </svg>
-                        <span>Exportar</span>
-                    </button>
-                </div>
             </div>
             <p class="text-gray-600 mb-4">
                 Para la vigencia 2026 el grupo de uso económico con la mayor mediana de valor comercial por metro
@@ -680,20 +566,6 @@
             <h2 class="text-2xl font-bold text-gray-800">
                 Mediana del índice de valoración inmobiliaria
             </h2>
-            <div class="flex flex-wrap justify-center md:justify-end space-x-2 mt-4 md:mt-0">
-                <!-- Botón de exportar a Excel -->
-                <button id="btn-download-excel-mapa-localidades"
-                    class="flex items-center justify-center bg-[#FEB400] hover:bg-[#e0a100] text-black font-semibold px-0 py-2 rounded-md shadow-md"
-                    title="Descargar datos en Excel">
-                    <!-- Icono de descarga -->
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                        stroke="currentColor" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round"
-                            d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                    </svg>
-                    <span>Exportar</span>
-                </button>
-            </div>
         </div>
         <p class="text-gray-600 mb-4">
             Para la vigencia 2026 la localidad la mayor mediana del índice de valoración inmobiliaria urbana fue Ciudad
@@ -715,7 +587,7 @@
         </p>
     </div>
 
-    <!-- iNPUT: IVIUR_2026_LG-->
+    <!--  Grfico 11 iNPUT: IVIUR_2026_LG-->
     <section class="mb-12">
         <div class="chart-card animate-fadein">
             <div class="flex flex-col md:flex-row justify-between items-center mb-4">
@@ -729,15 +601,6 @@
                         <option value="Residencial">Residencial</option>
                         <option value="No residencial">No residencial</option>
                     </select>
-                    <button id="btn-download-excel-iviur-lge"
-                        class="flex items-center justify-center bg-[#FEB400] hover:bg-[#e0a100] text-black font-semibold px-4 py-2 rounded-md shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-1" fill="none" viewBox="0 0 24 24"
-                            stroke="currentColor" stroke-width="2">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4" />
-                        </svg>
-                        <span>Exportar</span>
-                    </button>
                 </div>
             </div>
             <p class="text-gray-600 mb-4">
@@ -1693,8 +1556,6 @@
                     this.render();
                 }
 
-                // Ya NO escuchamos cambios en el select porque no existe
-
                 const btnDownload = document.getElementById("btn-download-excel-mapa-localidades");
                 if (btnDownload) {
                     btnDownload.addEventListener("click", () => this.exportToExcel());
@@ -1861,7 +1722,7 @@
                 }
 
                 const rows = this.data.map(registro => ({
-                    Año: registro.anio || "2026", // Valor por defecto si no viene en el json
+                    Año: registro.anio || "2026", 
                     Localidad: registro.NOMBRE_LOCALIDAD || "",
                     Transacciones: registro.n || 0
                 }));
@@ -1878,7 +1739,7 @@
             constructor() {
                 this.data = dataAvaluoCatastralLGE;
                 this.chart = null;
-                this.selectedLocalidad = ""; // Nueva propiedad para guardar el estado del filtro
+                this.selectedLocalidad = ""; 
                 this.init();
             }
 
@@ -1888,11 +1749,15 @@
 
                 this.chart = echarts.init(container);
 
+                // Animación inicial
+                if (typeof Animacion !== "undefined" && Animacion.ejecutarAnimacion) {
+                    Animacion.ejecutarAnimacion(this.chart, () => this.render());
+                } else {
+                    this.render();
+                }
+
                 // 1. Poblamos el select con las localidades de los datos
                 this.populateLocalidadFilter();
-
-                // 2. Renderizamos el gráfico (por defecto sin filtro)
-                this.render();
 
                 // 3. Inicializamos los listeners del select y el botón de exportación
                 this.initEventListeners();
@@ -2076,7 +1941,12 @@
                 if (!container) return;
                 this.chart = echarts.init(container);
 
-                this.render();
+                // Animación inicial
+                if (typeof Animacion !== "undefined" && Animacion.ejecutarAnimacion) {
+                    Animacion.ejecutarAnimacion(this.chart, () => this.render());
+                } else {
+                    this.render();
+                }
 
                 const btnDownload = document.getElementById("btn-download-excel-burbujas");
                 if (btnDownload) {
