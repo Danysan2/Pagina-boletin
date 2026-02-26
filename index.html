@@ -244,7 +244,7 @@
 
 <body class="bg-gray-100 text-gray-800">
     <h2 class="Titulos">
-        Operación estadística Indicadores de Valor Predial Urbano de Bogotá (IVPUB) <br> <br>
+        Operación estadística <br> Indicadores de Valor Predial Urbano de Bogotá (IVPUB) <br> <br>
     </h2>
     <p class="texto-descripcion" style="font-weight: bold" ;>
         Boletín No. 1 - datos vigencia 2026 <br><br>
@@ -261,8 +261,9 @@
         experiencia de la UAECD con la estimación del Índice de Valoración Inmobiliaria Urbana (IVIUR), calculado
         anualmente desde 2001, extendiéndola junto con indicadores adicionales de valor, hacia un producto
         estadístico
-        con alcance distrital y desagregaciones espaciales hasta el nivel de manzana en sus microdatos. <br> <br>
-        <button onclick="verMas()">Ver más</button>
+        con alcance distrital y desagregaciones espaciales hasta el nivel de manzana en sus microdatos. <strong><button
+                onclick="verMas()">Ver más</button></strong><br> <br>
+
     </p>
 
     <div id="contenido-oculto" style="display:none;">
@@ -294,24 +295,22 @@
         Mediana del avalúo catastral
     </h2>
     <p class="texto-descripcion">
-        Representa una medida de tendencia central de los avalúos catastrales por metro cuadrado de los predios en
-        propiedad horizontal ubicados en una misma manzana, para áreas urbanas y de expansión urbana en la ciudad de
-        Bogotá. Excluye el suelo protegido y los predios de espacio público. Dichos avalúos son obtenidos a partir del
-        proceso catastral que se calcula anualmente y se utiliza para fines fiscales, estadísticos y administrativos.
-        estadístico
+        Representa una medida de tendencia central de los avalúos catastrales de los predios en suelo urbano. Excluye el
+        suelo protegido y los predios de espacio público. Los valores son obtenidos de la aplicación de la relación del
+        avalúo catastral respecto del avalúo comercial determinados por Consejo Distrital de Política Económica y Fiscal
+        – CONFIS.
 
     </p>
     <section class="mb-12">
         <div class="chart-card animate-fadein">
             <div class="flex flex-col md:flex-row justify-between items-center mb-4">
                 <h2 class="text-2xl font-bold text-gray-800">
-                    Mediana del avaúo catastral
+                    Mediana del avaúo catastral por localidades
                 </h2>
             </div>
             <p class="text-gray-600 mb-4">
                 Para la vigencia 2026, la localidad la mayor mediana de valor catastral fue Barrios Unidos con
-                $321.692.000 y una media de área construida de 82,60 m2, seguida de Teusaquillo $269.468.000 y 57,10 m2
-                y Antonio Nariño con $256.004.000 y102,90 m2.
+                $321.692.000, seguida de Teusaquillo $269.468.000 y Antonio Nariño con $256.004.000.
             </p>
             <div id="mapa-container">
                 <img src="brujula.webp" alt="Brujula" class="brujula-img">
@@ -334,8 +333,15 @@
         <div class="chart-card animate-fadein">
             <div class="flex flex-col md:flex-row justify-between items-center mb-4">
                 <h2 class="text-2xl font-bold text-gray-800">
-                    Avalúo por Grupo Económico
+                    Mediana del avalúo catastral por grupo económico
                 </h2>
+                <div class="flex flex-wrap justify-center md:justify-end space-x-2 mt-4 md:mt-0">
+                    <!-- Filtro de localidades -->
+                    <select id="filter-localidad-valor-integral-lge"
+                        class="bg-white border border-gray-300 text-gray-700 py-2 px-4 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#FEB400]">
+                        <option value="">Seleccione localidad</option>
+                    </select>
+                </div>
             </div>
             <p class="text-gray-600 mb-4">
                 Para la vigencia 2026 el grupo de uso económico con la mayor mediana de valor catastral fue Industrial
@@ -362,11 +368,14 @@
         <div class="chart-card animate-fadein">
             <div class="flex flex-col md:flex-row justify-between items-center mb-4">
                 <h2 class="text-2xl font-bold text-gray-800">
-                    Relación: Avalúo Total vs Cantidad de Predios
+                    Mediana del avalúo catastral, mediana del área construida y cantidad de predios por localidad
                 </h2>
             </div>
             <p class="text-gray-600 mb-4">
-                Avalúo en millones de pesos, cantidad de predios y valor promedio por predio
+                El gráfico muestra que, del total de localidades de Bogotá, hay 11 con tamaño de hasta cien mil predios
+                (excluyendo el suelo protegido y los predios de espacio público). En este grupo, la localidad de menor
+                tamaño es La Candelaria que cuenta con 14.965 predios, una mediana en el área construida de 35,6 m2 y
+                una media del avalúo catastral de $126,9 millones de pesos.
             </p>
             <div id="grafico-burbujas" class="echart-container"></div>
         </div>
@@ -385,14 +394,15 @@
         Mediana del avalúo catastral por metro cuadrado en predios PH
     </h2>
     <p class="texto-descripcion">
-        Es un indicador de tendencia central, representa la mediana de los valores catastrales de los predios ubicados
-        en una manzana catastral. Así las cosas, es un indicador que no debe ser interpretado como el avalúo puntual del
-        predio. Excluye el suelo protegido y los predios de espacio público.
+        Representa una medida de tendencia central de los avalúos catastrales por metros cuadrado de los predios
+        sometidos a régimen de propiedad horizontal (PH) en suelo urbano. Excluye el suelo protegido y los predios de
+        espacio público. Los valores son obtenidos de la aplicación de la relación del avalúo catastral respecto del
+        avalúo comercial determinados por Consejo Distrital de Política Económica y Fiscal – CONFIS.
     </p>
     <section class="mb-8 chart-card">
         <div class="flex flex-col md:flex-row justify-between items-center mb-4">
             <h2 class="text-2xl font-bold text-gray-800">
-
+                Mediana del avalúo catastral por metro cuadrado en predios PH por localidad
             </h2>
         </div>
         <p class="text-gray-600 mb-4">
@@ -420,7 +430,7 @@
         <div class="chart-card animate-fadein">
             <div class="flex flex-col md:flex-row justify-between items-center mb-4">
                 <h2 class="text-2xl font-bold text-gray-800">
-                    Avalúo por Grupo Económico
+                    Mediana del avalúo catastral por metro cuadrado en predios PH por grupo económico
                 </h2>
                 <div class="flex flex-wrap justify-center md:justify-end space-x-2 mt-4 md:mt-0">
                     <!-- Filtro de localidades -->
@@ -450,7 +460,7 @@
 
     <!-- Grafico 6: AVALUO COMERCIAL -->
     <h2 class="Titulos">
-        Mediana del valor comercial por localidad
+        Mediana del avalúo comercial
     </h2>
     <section class="mb-12">
         <div class="chart-card animate-fadein">
@@ -486,8 +496,15 @@
         <div class="chart-card animate-fadein">
             <div class="flex flex-col md:flex-row justify-between items-center mb-4">
                 <h2 class="text-2xl font-bold text-gray-800">
-                    Avalúo Comercial por Grupo Económico
+                    Mediana del avalúo comercial por grupo económico
                 </h2>
+                <div class="flex flex-wrap justify-center md:justify-end space-x-2 mt-4 md:mt-0">
+                    <!-- Filtro de localidades -->
+                    <select id="filter-localidad-avaluo-comercial-lge"
+                        class="bg-white border border-gray-300 text-gray-700 py-2 px-4 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#FEB400]">
+                        <option value="">Seleccione localidad</option>
+                    </select>
+                </div>
             </div>
             <p class="text-gray-600 mb-4">
                 Para la vigencia 2026, el grupo de uso económico con la mayor mediana de valor comercial fue Industrial
@@ -511,17 +528,23 @@
 
     <!-- Grafico 8: Valor refencia por Localidad-->
     <h2 class="Titulos">
-        Valor comercial por metro cuadrado de terreno 2026
+        Mediana del valor comercial por metro cuadrado de terreno - valor de referencia.
     </h2>
+    <p class="texto-descripcion">
+        Representa una medida de tendencia central de los valores comerciales por metro cuadrado de terreno en suelo
+        urbano en la ciudad de Bogotá. Excluye el suelo protegido y los predios de espacio público. Los valores son
+        obtenidos de los ejercicios técnicos de zonas homogéneas geoeconómicas realizados anualmente por la UAECD.  Son
+        valores de referencia y no se pueden asumir como valores puntuales por predio.
+    </p>
     <section class="mb-8 chart-card">
         <div class="flex flex-col md:flex-row justify-between items-center mb-4">
             <h2 class="text-2xl font-bold text-gray-800">
-                Mediana del valor comercial de terreno
+                Mediana del valor comercial por metro cuadrado de terreno por localidad
             </h2>
         </div>
         <p class="text-gray-600 mb-4">
             Para la vigencia 2026 la localidad la mayor mediana de valor comercial por metro cuadrado de área de terreno
-            fue Chapinero con $8.060.000, seguida de Santa Fe con $5.602.000,​
+            fue Chapinero con $8.060.000, seguida de Santa Fe con $5.602.000,
 
             La localidad con la menor mediana es Usme con $962.411
         </p>
@@ -544,8 +567,15 @@
         <div class="chart-card animate-fadein">
             <div class="flex flex-col md:flex-row justify-between items-center mb-4">
                 <h2 class="text-2xl font-bold text-gray-800">
-                    Avalúo Comercial por Grupo Económico
+                    Mediana del valor comercial por metro cuadrado de terreno por grupo económico
                 </h2>
+                <div class="flex flex-wrap justify-center md:justify-end space-x-2 mt-4 md:mt-0">
+                    <!-- Filtro de localidades -->
+                    <select id="filter-localidad-valor-referencia-lge"
+                        class="bg-white border border-gray-300 text-gray-700 py-2 px-4 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-[#FEB400]">
+                        <option value="">Seleccione localidad</option>
+                    </select>
+                </div>
             </div>
             <p class="text-gray-600 mb-4">
                 Para la vigencia 2026 el grupo de uso económico con la mayor mediana de valor comercial por metro
@@ -559,12 +589,17 @@
     <!---------------------- Grafico #10 IVIUR  ----------------------->
     <!-- -------------------------------------------------------------->
     <h2 class="Titulos">
-        Índice de valorización inmobiliaria urbana (IVIUR) 2026
+        Índice de Valoración Inmobiliaria Urbana
     </h2>
+    <p class="texto-descripcion">
+        Representa la mediana de las variaciones anuales de los valores comerciales de los predios en suelo urbano de la
+        ciudad de Bogotá. Excluye el suelo protegido y los predios de espacio público. Los valores son obtenidos de los
+        ejercicios técnicos aplicados por la UAECD en los procesos catastrales.
+    </p>
     <section class="mb-8 chart-card">
         <div class="flex flex-col md:flex-row justify-between items-center mb-4">
             <h2 class="text-2xl font-bold text-gray-800">
-                Mediana del índice de valoración inmobiliaria
+                Índice de Valoración Inmobiliaria Urbana por localidad
             </h2>
         </div>
         <p class="text-gray-600 mb-4">
@@ -592,7 +627,7 @@
         <div class="chart-card animate-fadein">
             <div class="flex flex-col md:flex-row justify-between items-center mb-4">
                 <h2 class="text-2xl font-bold text-gray-800">
-                    Uso residencial y no residencial
+                    Índice de Valoración Inmobiliaria Urbana por usos residenciales y usos no residenciales
                 </h2>
                 <div class="flex flex-wrap justify-center md:justify-end space-x-2 mt-4 md:mt-0">
                     <!-- Filtro de tipo -->
@@ -826,7 +861,7 @@
             { NOMBRE_LOCALIDAD: "USME", GRUPO_ECONOMICO_2026: "RESIDENCIAL", AVALUO_CATASTRAL_2026: 95810500, PREDIOS_2026: 80948 }
         ];
 
-        
+
 
         //  Avaluo_catastral_L
         const dataAvaluoCatastralL = [
@@ -1722,7 +1757,7 @@
                 }
 
                 const rows = this.data.map(registro => ({
-                    Año: registro.anio || "2026", 
+                    Año: registro.anio || "2026",
                     Localidad: registro.NOMBRE_LOCALIDAD || "",
                     Transacciones: registro.n || 0
                 }));
@@ -1739,7 +1774,7 @@
             constructor() {
                 this.data = dataAvaluoCatastralLGE;
                 this.chart = null;
-                this.selectedLocalidad = ""; 
+                this.selectedLocalidad = "";
                 this.init();
             }
 
@@ -2285,59 +2320,43 @@
             constructor() {
                 this.data = datatortaValorIntegral_LGE;
                 this.chart = null;
-                this.initChart();
-                this.initEventListeners();
-                this.populateLocalidadFilter();
+                this.selectedLocalidad = "";
+                this.init();
             }
 
-            /**
-             * Inicializa el gráfico Echarts
-             */
-            initChart() {
-                const chartContainer = document.getElementById("grafico-valor-integral-LGE");
-                if (!chartContainer) {
-                    this.showError("Error: No se encontró el contenedor del gráfico");
-                    return;
-                }
+            init() {
+                const container = document.getElementById("grafico-valor-integral-LGE");
+                if (!container) return;
 
-                this.chart = echarts.init(chartContainer);
+                this.chart = echarts.init(container);
 
-                // Ejecutar animación de carga usando la clase Animacion
-                if (typeof Animacion !== 'undefined' && Animacion.ejecutarAnimacion) {
-                    Animacion.ejecutarAnimacion(this.chart, () => {
-                        const select = document.getElementById("filter-localidad-pie-valor-integral-lge");
-                        const initialLocalidad = select && select.value ? select.value : this.getFirstLocalidad();
-                        this.updateChart(initialLocalidad);
-                    });
+                // Animación inicial
+                if (typeof Animacion !== "undefined" && Animacion.ejecutarAnimacion) {
+                    Animacion.ejecutarAnimacion(this.chart, () => this.render());
                 } else {
-                    const select = document.getElementById("filter-localidad-pie-valor-integral-lge");
-                    const initialLocalidad = select && select.value ? select.value : this.getFirstLocalidad();
-                    this.updateChart(initialLocalidad);
+                    this.render();
                 }
+
+                // Poblamos el select con las localidades de los datos
+                this.populateLocalidadFilter();
+
+                // Inicializamos los listeners del select y el botón de exportación
+                this.initEventListeners();
+
+                window.addEventListener("resize", () => {
+                    if (this.chart) this.chart.resize();
+                });
             }
 
-            /**
-             * Obtiene la primera localidad disponible en los datos
-             */
-            getFirstLocalidad() {
-                if (this.data && this.data.length > 0) {
-                    return this.data[0].NOMBRE_LOCALIDAD;
-                }
-                return "";
-            }
-
-            /**
-             * Puebla el filtro de localidades con opciones únicas
-             */
             populateLocalidadFilter() {
                 const filterSelect = document.getElementById("filter-localidad-pie-valor-integral-lge");
                 if (!filterSelect) return;
 
-                // Obtener localidades únicas
+                // Obtener localidades únicas y ordenarlas alfabéticamente
                 const localidades = [...new Set(this.data.map(item => item.NOMBRE_LOCALIDAD))].sort();
 
-                // Limpiar opciones existentes excepto la primera
-                filterSelect.innerHTML = '<option value="">Seleccione localidad</option>';
+                // Limpiar opciones y colocar una por defecto general
+                filterSelect.innerHTML = '<option value="">Todas las localidades</option>';
 
                 // Añadir opciones de localidades
                 localidades.forEach(localidad => {
@@ -2346,166 +2365,114 @@
                     option.textContent = localidad;
                     filterSelect.appendChild(option);
                 });
-
-                // Seleccionar la primera localidad por defecto
-                if (localidades.length > 0) {
-                    filterSelect.value = localidades[0];
-                }
             }
 
-            /**
-             * Inicializa los event listeners para filtros y exportación
-             */
             initEventListeners() {
                 // Event listener para el filtro de localidad
                 const filterSelect = document.getElementById("filter-localidad-pie-valor-integral-lge");
                 if (filterSelect) {
                     filterSelect.addEventListener("change", (e) => {
-                        this.updateChart(e.target.value);
+                        this.selectedLocalidad = e.target.value;
+                        this.render();
                     });
                 }
 
-                // Event listener para exportación
+                // Event listener para exportar
                 const btnDownload = document.getElementById("btn-download-excel-valor-integral-lge");
                 if (btnDownload) {
-                    btnDownload.addEventListener("click", () => {
-                        this.exportToExcel();
-                    });
-                } else {
-                    console.warn("Botón de exportar no encontrado");
+                    btnDownload.addEventListener("click", () => this.exportToExcel());
                 }
-
-                // Event listener para resize
-                window.addEventListener("resize", () => {
-                    if (this.chart) this.chart.resize();
-                });
             }
 
-            /**
-             * Actualiza el gráfico según la localidad seleccionada
-             * @param {string} localidadSeleccionada Localidad seleccionada del filtro
-             */
-            updateChart(localidadSeleccionada) {
-                if (!this.data || this.data.length === 0) {
-                    this.showError("No hay datos disponibles");
-                    return;
+            render() {
+                // --- LOGICA DE FILTRADO ---
+                let datosFiltrados = this.data;
+
+                if (this.selectedLocalidad !== "") {
+                    // Si hay una localidad seleccionada, filtramos la data
+                    datosFiltrados = this.data.filter(item => item.NOMBRE_LOCALIDAD === this.selectedLocalidad);
                 }
 
-                if (!localidadSeleccionada) {
-                    this.showNoDataMessage("Seleccione una localidad");
-                    return;
-                }
-
-                try {
-                    this.hideError();
-
-                    // Filtrar datos para la localidad seleccionada
-                    const datosLocalidad = this.data.filter((d) =>
-                        d.NOMBRE_LOCALIDAD === localidadSeleccionada
-                    );
-
-                    if (!datosLocalidad || datosLocalidad.length === 0) {
-                        this.showNoDataMessage(localidadSeleccionada);
-                        return;
+                // Calcular total por localidad (usando solo los datos filtrados)
+                const localidadesMap = {};
+                datosFiltrados.forEach(item => {
+                    if (!localidadesMap[item.NOMBRE_LOCALIDAD]) {
+                        localidadesMap[item.NOMBRE_LOCALIDAD] = 0;
                     }
+                    localidadesMap[item.NOMBRE_LOCALIDAD] += item.AVALUO_CATASTRAL_2026;
+                });
 
-                    // Preparar los datos para el gráfico de pie
-                    const dataSeries = datosLocalidad.map(item => ({
-                        value: item.AVALUO_CATASTRAL_2026,
-                        name: item.GRUPO_ECONOMICO_2026,
-                        predios: item.PREDIOS_2026
-                    }));
+                // Mostrar las 20 localidades (o solo 1 si está filtrada)
+                const topLocalidades = Object.keys(localidadesMap)
+                    .sort((a, b) => localidadesMap[b] - localidadesMap[a])
+                    .slice(0, 20);
 
-                    // Calcular el total para los porcentajes
-                    const total = dataSeries.reduce((sum, item) => sum + item.value, 0);
+                // Grupos económicos
+                const gruposEconomicos = [...new Set(this.data.map(item => item.GRUPO_ECONOMICO_2026))];
 
-                    const option = {
-                        color: ["#FEB400", "#E3192F", "#1E90FF", "#32CD32", "#FF8C00", "#9370DB", "#20B2AA"],
-                        title: {
-                            text: `Avalúo por Grupo Económico - ${localidadSeleccionada}`,
-                            left: "center",
-                            top: "2%",
-                            textStyle: {
-                                fontSize: 16,
-                                fontWeight: "bold",
-                                color: "#333"
-                            }
+                // Construir las Series
+                const seriesData = gruposEconomicos.map(grupo => {
+                    return {
+                        name: grupo,
+                        type: 'bar',
+                        emphasis: { focus: 'series' },
+                        label: {
+                            show: this.selectedLocalidad !== "",
+                            position: 'inside',
+                            formatter: '{a}',
+                            fontSize: 11,
+                            color: '#fff',
+                            fontWeight: 'bold'
                         },
-                        tooltip: {
-                            trigger: "item",
-                            formatter: function (params) {
-                                const valor = params.data.value.toLocaleString("es-CO", {
-                                    minimumFractionDigits: 2,
-                                    maximumFractionDigits: 2
-                                });
-                                const predios = params.data.predios.toLocaleString("es-CO");
-                                const percentage = params.percent.toFixed(1).replace('.', ',');
-                                return `${params.name}<br/>Avalúo: $${valor}<br/>Predios: ${predios}`;
-                            }
-                        },
-                        legend: {
-                            top: "bottom",
-                            left: "center",
-                            orient: "horizontal",
-                            data: dataSeries.map((item) => item.name),
-                            textStyle: { color: "#333" }
-                        },
-                        series: [{
-                            name: "Avalúo por Grupo Económico",
-                            type: "pie",
-                            radius: ["40%", "70%"],
-                            avoidLabelOverlap: false,
-                            itemStyle: {
-                                borderRadius: 10,
-                                borderColor: "#fff",
-                                borderWidth: 2
-                            },
-                            label: {
-                                show: false,
-                                position: "center"
-                            },
-                            emphasis: {
-                                label: {
-                                    show: true,
-                                    fontSize: 16,
-                                    fontWeight: "bold",
-                                    formatter: function (params) {
-                                        const percentage = params.percent.toFixed(1).replace('.', ',');
-                                        return params.name + '\n' + percentage + '%';
-                                    }
-                                }
-                            },
-                            labelLine: { show: false },
-                            data: dataSeries
-                        }]
+                        data: topLocalidades.map(loc => {
+                            const item = datosFiltrados.find(d => d.NOMBRE_LOCALIDAD === loc && d.GRUPO_ECONOMICO_2026 === grupo);
+                            return item ? (item.AVALUO_CATASTRAL_2026 / 1000000).toFixed(2) : 0;
+                        })
                     };
+                });
 
-                    this.chart.setOption(option, true);
-
-                } catch (error) {
-                    this.showError("Error al actualizar el gráfico: " + error.message);
-                }
-            }
-
-            /**
-             * Muestra mensaje cuando no hay datos para la localidad seleccionada
-             */
-            showNoDataMessage(localidad) {
-                this.chart.clear();
-                const option = {
-                    graphic: {
-                        type: "text",
-                        left: "center",
-                        top: "center",
-                        style: {
-                            text: `No hay datos disponibles para ${localidad}`,
-                            fill: "#666",
-                            font: "16px sans-serif",
-                            textAlign: "center"
-                        },
+                // Aplicar configuraciones
+                this.chart.setOption({
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: { type: 'shadow' },
+                        formatter: (params) => {
+                            let result = `<strong>${params[0].axisValue}</strong><br/>`;
+                            params.forEach(param => {
+                                result += `${param.marker} ${param.seriesName}: ${parseFloat(param.value).toFixed(2)} M<br/>`;
+                            });
+                            return result;
+                        }
                     },
-                };
-                this.chart.setOption(option, true);
+                    legend: {
+                        data: gruposEconomicos,
+                        top: 10,
+                        textStyle: { fontSize: 10 }
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: topLocalidades,
+                        axisLabel: {
+                            rotate: 45,
+                            fontSize: 10
+                        }
+                    },
+                    yAxis: {
+                        type: 'value',
+                        name: 'Avalúo Catastral (Millones COP)',
+                        axisLabel: {
+                            formatter: '${value}M'
+                        }
+                    },
+                    series: seriesData,
+                    color: ['#8e44ad', '#3498db', '#e74c3c', '#f39c12', '#16a085', '#2c3e50', '#d35400', '#27ae60']
+                }, true);
             }
 
             /**
@@ -2544,51 +2511,12 @@
                     alert("❌ Error al exportar: " + error.message);
                 }
             }
-
-            /**
-             * Muestra mensajes de error visualmente en el DOM
-             * @param {string} message Mensaje a mostrar
-             */
-            showError(message) {
-                console.error(message);
-
-                const container = document.getElementById('grafico-valor-integral-LGE');
-                if (container) {
-                    let prev = container.querySelector('.error-msg');
-                    if (prev) prev.remove();
-
-                    let p = document.createElement('p');
-                    p.className = 'error-msg';
-                    p.style.color = '#b91c1c';
-                    p.style.marginTop = '8px';
-                    p.style.textAlign = 'center';
-                    p.style.fontWeight = 'bold';
-                    p.textContent = `⚠️ ${message}`;
-                    container.parentNode.insertBefore(p, container.nextSibling);
-
-                    // Remover después de 5 segundos
-                    setTimeout(() => {
-                        if (p.parentNode) p.remove();
-                    }, 5000);
-                }
-            }
-
-            /**
-             * Oculta mensajes de error
-             */
-            hideError() {
-                const container = document.getElementById('grafico-valor-integral-LGE');
-                if (container && container.parentNode) {
-                    let errorMsg = container.parentNode.querySelector('.error-msg');
-                    if (errorMsg) errorMsg.remove();
-                }
-            }
         }
 
         class GraficoMapaAvaluoComercial_L_2026 {
             constructor() {
-                this.geojson = geoJsonMapaLocalidadesAvaluoCatastralL; // Variable global del GeoJSON
-                this.data = dataMapaAvaluoComercial_L;       // Variable global de los datos
+                this.geojson = geoJsonMapaLocalidadesAvaluoCatastralL;
+                this.data = dataMapaAvaluoComercial_L;
                 this.localidadMap = {
                     "LA CANDELARIA": "CANDELARIA",
                     "ANTONIO NARINO": "ANTONIO NARIÑO",
@@ -2814,173 +2742,159 @@
             constructor() {
                 this.data = dataAvaluoComercial_LGE;
                 this.chart = null;
-                this.initChart();
+                this.selectedLocalidad = "";
+                this.init();
+            }
+
+            init() {
+                const container = document.getElementById("grafico-avaluo-comercial-LGE");
+                if (!container) return;
+
+                this.chart = echarts.init(container);
+
+                // Animación inicial
+                if (typeof Animacion !== "undefined" && Animacion.ejecutarAnimacion) {
+                    Animacion.ejecutarAnimacion(this.chart, () => this.render());
+                } else {
+                    this.render();
+                }
+
+                // Poblamos el select con las localidades de los datos
+                this.populateLocalidadFilter();
+
+                // Inicializamos los listeners del select y el botón de exportación
                 this.initEventListeners();
-            }
 
-            /**
-             * Inicializa el gráfico Echarts
-             */
-            initChart() {
-                const chartContainer = document.getElementById("grafico-avaluo-comercial-LGE");
-                if (!chartContainer) {
-                    this.showError("Error: No se encontró el contenedor del gráfico");
-                    return;
-                }
-
-                this.chart = echarts.init(chartContainer);
-
-                // Ejecutar animación de carga usando la clase Animacion
-                if (typeof Animacion !== 'undefined' && Animacion.ejecutarAnimacion) {
-                    Animacion.ejecutarAnimacion(this.chart, () => {
-                        this.updateChart();
-                    });
-                } else {
-                    this.updateChart();
-                }
-            }
-
-            /**
-             * Inicializa los event listeners para exportación
-             */
-            initEventListeners() {
-                // Event listener para exportación
-                const btnDownload = document.getElementById("btn-download-excel-avaluo-comercial-lge");
-                if (btnDownload) {
-                    btnDownload.addEventListener("click", () => {
-                        this.exportToExcel();
-                    });
-                } else {
-                    console.warn("Botón de exportar no encontrado");
-                }
-
-                // Event listener para resize
                 window.addEventListener("resize", () => {
                     if (this.chart) this.chart.resize();
                 });
             }
 
-            /**
-             * Actualiza el gráfico mostrando las primeras 10 localidades
-             */
-            updateChart() {
-                if (!this.data || this.data.length === 0) {
-                    this.showError("No hay datos disponibles");
-                    return;
+            populateLocalidadFilter() {
+                const filterSelect = document.getElementById("filter-localidad-avaluo-comercial-lge");
+                if (!filterSelect) return;
+
+                // Obtener localidades únicas y ordenarlas alfabéticamente
+                const localidades = [...new Set(this.data.map(item => item.NOMBRE_LOCALIDAD))].sort();
+
+                // Limpiar opciones y colocar una por defecto general
+                filterSelect.innerHTML = '<option value="">Todas las localidades</option>';
+
+                // Añadir opciones de localidades
+                localidades.forEach(localidad => {
+                    const option = document.createElement('option');
+                    option.value = localidad;
+                    option.textContent = localidad;
+                    filterSelect.appendChild(option);
+                });
+            }
+
+            initEventListeners() {
+                // Event listener para el filtro de localidad
+                const filterSelect = document.getElementById("filter-localidad-avaluo-comercial-lge");
+                if (filterSelect) {
+                    filterSelect.addEventListener("change", (e) => {
+                        this.selectedLocalidad = e.target.value;
+                        this.render();
+                    });
                 }
 
-                try {
-                    this.hideError();
+                // Event listener para exportar
+                const btnDownload = document.getElementById("btn-download-excel-avaluo-comercial-lge");
+                if (btnDownload) {
+                    btnDownload.addEventListener("click", () => this.exportToExcel());
+                }
+            }
 
-                    // Obtener todas las localidades únicas y tomar solo las primeras 10
-                    const todasLocalidades = [...new Set(this.data.map(item => item.NOMBRE_LOCALIDAD))].sort();
-                    const localidades = todasLocalidades.slice(0, 10);
+            render() {
+                // --- LOGICA DE FILTRADO ---
+                let datosFiltrados = this.data;
 
-                    // Obtener todos los grupos económicos únicos
-                    const gruposEconomicos = [...new Set(this.data.map(item => item.GRUPO_ECONOMICO_2026))];
+                if (this.selectedLocalidad !== "") {
+                    // Si hay una localidad seleccionada, filtramos la data
+                    datosFiltrados = this.data.filter(item => item.NOMBRE_LOCALIDAD === this.selectedLocalidad);
+                }
 
-                    // Calcular totales por localidad para los porcentajes
-                    const totalesPorLocalidad = {};
-                    localidades.forEach(localidad => {
-                        const total = this.data
-                            .filter(d => d.NOMBRE_LOCALIDAD === localidad)
-                            .reduce((sum, d) => sum + d.VALOR_COMERCIAL_2026, 0);
-                        totalesPorLocalidad[localidad] = total;
-                    });
+                // Calcular total por localidad (usando solo los datos filtrados)
+                const localidadesMap = {};
+                datosFiltrados.forEach(item => {
+                    if (!localidadesMap[item.NOMBRE_LOCALIDAD]) {
+                        localidadesMap[item.NOMBRE_LOCALIDAD] = 0;
+                    }
+                    localidadesMap[item.NOMBRE_LOCALIDAD] += item.VALOR_COMERCIAL_2026;
+                });
 
-                    // Preparar series para cada grupo económico
-                    const series = gruposEconomicos.map(grupo => {
-                        const dataGrupo = localidades.map(localidad => {
-                            const item = this.data.find(d =>
-                                d.NOMBRE_LOCALIDAD === localidad &&
-                                d.GRUPO_ECONOMICO_2026 === grupo
-                            );
-                            const valorReal = item ? item.VALOR_COMERCIAL_2026 : 0;
-                            const total = totalesPorLocalidad[localidad];
-                            const porcentaje = total > 0 ? (valorReal / total) * 100 : 0;
+                // Mostrar las 20 localidades (o solo 1 si está filtrada)
+                const topLocalidades = Object.keys(localidadesMap)
+                    .sort((a, b) => localidadesMap[b] - localidadesMap[a])
+                    .slice(0, 20);
 
-                            return {
-                                value: porcentaje,
-                                valorReal: valorReal,
-                                localidad: localidad
-                            };
-                        });
+                // Grupos económicos
+                const gruposEconomicos = [...new Set(this.data.map(item => item.GRUPO_ECONOMICO_2026))];
 
-                        return {
-                            name: grupo,
-                            type: 'bar',
-                            stack: 'total',
-                            label: {
-                                show: true,
-                                formatter: (params) => {
-                                    return params.value > 0 ? params.value.toFixed(1) + '%' : '';
-                                }
-                            },
-                            emphasis: {
-                                focus: 'series'
-                            },
-                            data: dataGrupo
-                        };
-                    });
-
-                    const option = {
-                        color: ["#FEB400", "#E3192F", "#1E90FF", "#32CD32", "#FF8C00", "#9370DB", "#20B2AA"],
-                        tooltip: {
-                            trigger: 'axis',
-                            axisPointer: {
-                                type: 'shadow'
-                            },
-                            formatter: function (params) {
-                                let result = `<strong>${params[0].axisValue}</strong><br/>`;
-                                params.forEach(param => {
-                                    if (param.data.valorReal > 0) {
-                                        const valorFormateado = param.data.valorReal.toLocaleString("es-CO", {
-                                            minimumFractionDigits: 2,
-                                            maximumFractionDigits: 2
-                                        });
-                                        const porcentaje = param.value.toFixed(1);
-                                        result += `${param.seriesName}: ${valorFormateado} (${porcentaje}%)<br/>`;
-                                    }
-                                });
-                                return result;
-                            }
+                // Construir las Series
+                const seriesData = gruposEconomicos.map(grupo => {
+                    return {
+                        name: grupo,
+                        type: 'bar',
+                        emphasis: { focus: 'series' },
+                        label: {
+                            show: this.selectedLocalidad !== "",
+                            position: 'inside',
+                            formatter: '{a}',
+                            fontSize: 11,
+                            color: '#fff',
+                            fontWeight: 'bold'
                         },
-                        legend: {
-                            top: 'bottom',
-                            left: 'center',
-                            orient: 'horizontal',
-                            data: gruposEconomicos,
-                            textStyle: { color: "#333" }
-                        },
-                        grid: {
-                            left: '15%',
-                            right: '4%',
-                            bottom: '15%',
-                            top: '5%',
-                            containLabel: true
-                        },
-                        xAxis: {
-                            type: 'value',
-                            name: 'Porcentaje (%)',
-                            nameLocation: 'middle',
-                            nameGap: 30,
-                            max: 100,
-                            axisLabel: {
-                                formatter: '{value}%'
-                            }
-                        },
-                        yAxis: {
-                            type: 'category',
-                            data: localidades
-                        },
-                        series: series
+                        data: topLocalidades.map(loc => {
+                            const item = datosFiltrados.find(d => d.NOMBRE_LOCALIDAD === loc && d.GRUPO_ECONOMICO_2026 === grupo);
+                            return item ? (item.VALOR_COMERCIAL_2026 / 1000000).toFixed(2) : 0;
+                        })
                     };
+                });
 
-                    this.chart.setOption(option, true);
-
-                } catch (error) {
-                    this.showError("Error al actualizar el gráfico: " + error.message);
-                }
+                // Aplicar configuraciones
+                this.chart.setOption({
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: { type: 'shadow' },
+                        formatter: (params) => {
+                            let result = `<strong>${params[0].axisValue}</strong><br/>`;
+                            params.forEach(param => {
+                                result += `${param.marker} ${param.seriesName}: ${parseFloat(param.value).toFixed(2)} M<br/>`;
+                            });
+                            return result;
+                        }
+                    },
+                    legend: {
+                        data: gruposEconomicos,
+                        top: 10,
+                        textStyle: { fontSize: 10 }
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: topLocalidades,
+                        axisLabel: {
+                            rotate: 45,
+                            fontSize: 10
+                        }
+                    },
+                    yAxis: {
+                        type: 'value',
+                        name: 'Valor Comercial (Millones COP)',
+                        axisLabel: {
+                            formatter: '${value}M'
+                        }
+                    },
+                    series: seriesData,
+                    color: ['#8e44ad', '#3498db', '#e74c3c', '#f39c12', '#16a085', '#2c3e50', '#d35400', '#27ae60']
+                }, true);
             }
 
             /**
@@ -3017,45 +2931,6 @@
                 } catch (error) {
                     console.error("Error al exportar:", error);
                     alert("❌ Error al exportar: " + error.message);
-                }
-            }
-
-            /**
-             * Muestra mensajes de error visualmente en el DOM
-             * @param {string} message Mensaje a mostrar
-             */
-            showError(message) {
-                console.error(message);
-
-                const container = document.getElementById('grafico-avaluo-comercial-LGE');
-                if (container) {
-                    let prev = container.querySelector('.error-msg');
-                    if (prev) prev.remove();
-
-                    let p = document.createElement('p');
-                    p.className = 'error-msg';
-                    p.style.color = '#b91c1c';
-                    p.style.marginTop = '8px';
-                    p.style.textAlign = 'center';
-                    p.style.fontWeight = 'bold';
-                    p.textContent = `⚠️ ${message}`;
-                    container.parentNode.insertBefore(p, container.nextSibling);
-
-                    // Remover después de 5 segundos
-                    setTimeout(() => {
-                        if (p.parentNode) p.remove();
-                    }, 5000);
-                }
-            }
-
-            /**
-             * Oculta mensajes de error
-             */
-            hideError() {
-                const container = document.getElementById('grafico-avaluo-comercial-LGE');
-                if (container && container.parentNode) {
-                    let errorMsg = container.parentNode.querySelector('.error-msg');
-                    if (errorMsg) errorMsg.remove();
                 }
             }
         }
@@ -3285,171 +3160,160 @@
             constructor() {
                 this.data = databarrasValorReferencia_LGE;
                 this.chart = null;
-                this.initChart();
+                this.selectedLocalidad = "";
+                this.init();
+            }
+
+            init() {
+                const container = document.getElementById("grafico-valor-referencia-LGE");
+                if (!container) return;
+
+                this.chart = echarts.init(container);
+
+                // Animación inicial
+                if (typeof Animacion !== "undefined" && Animacion.ejecutarAnimacion) {
+                    Animacion.ejecutarAnimacion(this.chart, () => this.render());
+                } else {
+                    this.render();
+                }
+
+                // Poblamos el select con las localidades de los datos
+                this.populateLocalidadFilter();
+
+                // Inicializamos los listeners del select y el botón de exportación
                 this.initEventListeners();
-            }
-            /*
-            Inicializa el gráfico Echarts
-            */
-            initChart() {
-                const chartContainer = document.getElementById("grafico-valor-referencia-LGE");
-                if (!chartContainer) {
-                    this.showError("Error: No se encontró el contenedor del gráfico");
-                    return;
-                }
 
-                this.chart = echarts.init(chartContainer);
-
-                // Ejecutar animación de carga usando la clase Animacion
-                if (typeof Animacion !== 'undefined' && Animacion.ejecutarAnimacion) {
-                    Animacion.ejecutarAnimacion(this.chart, () => {
-                        this.updateChart();
-                    });
-                } else {
-                    this.updateChart();
-                }
-            }
-            /*
-             Inicializa los event listeners para filtros y exportación           
-            */
-            initEventListeners() {
-                // Event listener para exportación
-                const btnDownload = document.getElementById("btn-download-valor-referencia-LGE");
-                if (btnDownload) {
-                    btnDownload.addEventListener("click", () => {
-                        this.exportToExcel();
-                    });
-                } else {
-                    console.warn("Botón de exportar no encontrado");
-                }
-
-                // Event listener para resize
                 window.addEventListener("resize", () => {
                     if (this.chart) this.chart.resize();
                 });
             }
-            /**
-             * Actualiza el gráfico mostrando las primeras 10 localidades
-             */
-            updateChart() {
-                if (!this.data || this.data.length === 0) {
-                    this.showError("No hay datos disponibles");
-                    return;
+
+            populateLocalidadFilter() {
+                const filterSelect = document.getElementById("filter-localidad-valor-referencia-lge");
+                if (!filterSelect) return;
+
+                // Obtener localidades únicas y ordenarlas alfabéticamente
+                const localidades = [...new Set(this.data.map(item => item.NOMBRE_LOCALIDAD))].sort();
+
+                // Limpiar opciones y colocar una por defecto general
+                filterSelect.innerHTML = '<option value="">Todas las localidades</option>';
+
+                // Añadir opciones de localidades
+                localidades.forEach(localidad => {
+                    const option = document.createElement('option');
+                    option.value = localidad;
+                    option.textContent = localidad;
+                    filterSelect.appendChild(option);
+                });
+            }
+
+            initEventListeners() {
+                // Event listener para el filtro de localidad
+                const filterSelect = document.getElementById("filter-localidad-valor-referencia-lge");
+                if (filterSelect) {
+                    filterSelect.addEventListener("change", (e) => {
+                        this.selectedLocalidad = e.target.value;
+                        this.render();
+                    });
                 }
 
-                try {
-                    this.hideError();
-
-                    // Obtener todas las localidades únicas y tomar solo las primeras 10
-                    const todasLocalidades = [...new Set(this.data.map(item => item.NOMBRE_LOCALIDAD))].sort();
-                    const localidades = todasLocalidades.slice(0, 10);
-
-                    // Obtener todos los grupos económicos únicos
-                    const gruposEconomicos = [...new Set(this.data.map(item => item.GRUPO_ECONOMICO_2026))];
-
-                    // Calcular totales por localidad para los porcentajes
-                    const totalesPorLocalidad = {};
-                    localidades.forEach(localidad => {
-                        const total = this.data
-                            .filter(d => d.NOMBRE_LOCALIDAD === localidad)
-                            .reduce((sum, d) => sum + d.n, 0);
-                        totalesPorLocalidad[localidad] = total;
-                    });
-                    // Preparar series para cada grupo económico
-                    const series = gruposEconomicos.map(grupo => {
-                        const dataGrupo = localidades.map(localidad => {
-                            const item = this.data.find(d =>
-                                d.NOMBRE_LOCALIDAD === localidad &&
-                                d.GRUPO_ECONOMICO_2026 === grupo
-                            );
-                            const valorReal = item ? item.n : 0;
-                            const total = totalesPorLocalidad[localidad];
-                            const porcentaje = total > 0 ? (valorReal / total) * 100 : 0;
-
-                            return {
-                                value: porcentaje,
-                                valorReal: valorReal,
-                                localidad: localidad
-                            };
-                        });
-
-                        return {
-                            name: grupo,
-                            type: 'bar',
-                            stack: 'total',
-                            label: {
-                                show: true,
-                                formatter: (params) => {
-                                    return params.value > 0 ? params.value.toFixed(1) + '%' : '';
-                                }
-                            },
-                            emphasis: {
-                                focus: 'series'
-                            },
-                            data: dataGrupo
-                        };
-                    });
-
-                    const option = {
-                        color: ["#FEB400", "#E3192F", "#1E90FF", "#32CD32", "#FF8C00", "#9370DB", "#20B2AA"],
-                        tooltip: {
-                            trigger: 'axis',
-                            axisPointer: {
-                                type: 'shadow'
-                            },
-                            formatter: function (params) {
-                                let result = `<strong>${params[0].axisValue}</strong><br/>`;
-                                params.forEach(param => {
-                                    if (param.data.valorReal > 0) {
-                                        const valorFormateado = param.data.valorReal.toLocaleString("es-CO", {
-                                            minimumFractionDigits: 0,
-                                            maximumFractionDigits: 0
-                                        });
-                                        const porcentaje = param.value.toFixed(1);
-                                        result += `${param.seriesName}: $${valorFormateado} (${porcentaje}%)<br/>`;
-                                    }
-                                });
-                                return result;
-                            }
-                        },
-                        legend: {
-                            top: 'bottom',
-                            left: 'center',
-                            orient: 'horizontal',
-                            data: gruposEconomicos,
-                            textStyle: { color: "#333" }
-                        },
-                        grid: {
-                            left: '15%',
-                            right: '4%',
-                            bottom: '15%',
-                            top: '5%',
-                            containLabel: true
-                        },
-                        xAxis: {
-                            type: 'value',
-                            name: 'Porcentaje (%)',
-                            nameLocation: 'middle',
-                            nameGap: 30,
-                            max: 100,
-                            axisLabel: {
-                                formatter: '{value}%'
-                            }
-                        },
-                        yAxis: {
-                            type: 'category',
-                            data: localidades
-                        },
-                        series: series
-                    };
-
-                    this.chart.setOption(option, true);
-
-                } catch (error) {
-                    this.showError("Error al actualizar el gráfico: " + error.message);
+                // Event listener para exportar
+                const btnDownload = document.getElementById("btn-download-valor-referencia-LGE");
+                if (btnDownload) {
+                    btnDownload.addEventListener("click", () => this.exportToExcel());
                 }
             }
 
+            render() {
+                // --- LOGICA DE FILTRADO ---
+                let datosFiltrados = this.data;
+
+                if (this.selectedLocalidad !== "") {
+                    // Si hay una localidad seleccionada, filtramos la data
+                    datosFiltrados = this.data.filter(item => item.NOMBRE_LOCALIDAD === this.selectedLocalidad);
+                }
+
+                // Calcular total por localidad (usando solo los datos filtrados)
+                const localidadesMap = {};
+                datosFiltrados.forEach(item => {
+                    if (!localidadesMap[item.NOMBRE_LOCALIDAD]) {
+                        localidadesMap[item.NOMBRE_LOCALIDAD] = 0;
+                    }
+                    localidadesMap[item.NOMBRE_LOCALIDAD] += item.n;
+                });
+
+                // Mostrar las 20 localidades (o solo 1 si está filtrada)
+                const topLocalidades = Object.keys(localidadesMap)
+                    .sort((a, b) => localidadesMap[b] - localidadesMap[a])
+                    .slice(0, 20);
+
+                // Grupos económicos
+                const gruposEconomicos = [...new Set(this.data.map(item => item.GRUPO_ECONOMICO_2026))];
+
+                // Construir las Series
+                const seriesData = gruposEconomicos.map(grupo => {
+                    return {
+                        name: grupo,
+                        type: 'bar',
+                        emphasis: { focus: 'series' },
+                        label: {
+                            show: this.selectedLocalidad !== "",
+                            position: 'inside',
+                            formatter: '{a}',
+                            fontSize: 11,
+                            color: '#fff',
+                            fontWeight: 'bold'
+                        },
+                        data: topLocalidades.map(loc => {
+                            const item = datosFiltrados.find(d => d.NOMBRE_LOCALIDAD === loc && d.GRUPO_ECONOMICO_2026 === grupo);
+                            return item ? item.n.toFixed(0) : 0;
+                        })
+                    };
+                });
+
+                // Aplicar configuraciones
+                this.chart.setOption({
+                    tooltip: {
+                        trigger: 'axis',
+                        axisPointer: { type: 'shadow' },
+                        formatter: (params) => {
+                            let result = `<strong>${params[0].axisValue}</strong><br/>`;
+                            params.forEach(param => {
+                                result += `${param.marker} ${param.seriesName}: ${parseFloat(param.value).toLocaleString("es-CO")}<br/>`;
+                            });
+                            return result;
+                        }
+                    },
+                    legend: {
+                        data: gruposEconomicos,
+                        top: 10,
+                        textStyle: { fontSize: 10 }
+                    },
+                    grid: {
+                        left: '3%',
+                        right: '4%',
+                        bottom: '3%',
+                        containLabel: true
+                    },
+                    xAxis: {
+                        type: 'category',
+                        data: topLocalidades,
+                        axisLabel: {
+                            rotate: 45,
+                            fontSize: 10
+                        }
+                    },
+                    yAxis: {
+                        type: 'value',
+                        name: 'Valor Referencia (COP)',
+                        axisLabel: {
+                            formatter: '${value}'
+                        }
+                    },
+                    series: seriesData,
+                    color: ['#8e44ad', '#3498db', '#e74c3c', '#f39c12', '#16a085', '#2c3e50', '#d35400', '#27ae60']
+                }, true);
+            }
             /**
              * Exporta los datos a un archivo Excel
              */
@@ -3483,45 +3347,6 @@
                 } catch (error) {
                     console.error("Error al exportar:", error);
                     alert("❌ Error al exportar: " + error.message);
-                }
-            }
-
-            /**
-             * Muestra mensajes de error visualmente en el DOM
-             * @param {string} message Mensaje a mostrar
-             */
-            showError(message) {
-                console.error(message);
-
-                const container = document.getElementById('grafico-valor-referencia-LGE');
-                if (container) {
-                    let prev = container.querySelector('.error-msg');
-                    if (prev) prev.remove();
-
-                    let p = document.createElement('p');
-                    p.className = 'error-msg';
-                    p.style.color = '#b91c1c';
-                    p.style.marginTop = '8px';
-                    p.style.textAlign = 'center';
-                    p.style.fontWeight = 'bold';
-                    p.textContent = `⚠️ ${message}`;
-                    container.parentNode.insertBefore(p, container.nextSibling);
-
-                    // Remover después de 5 segundos
-                    setTimeout(() => {
-                        if (p.parentNode) p.remove();
-                    }, 5000);
-                }
-            }
-
-            /**
-             * Oculta mensajes de error
-             */
-            hideError() {
-                const container = document.getElementById('grafico-valor-referencia-LGE');
-                if (container) {
-                    let prev = container.querySelector('.error-msg');
-                    if (prev) prev.remove();
                 }
             }
         }
